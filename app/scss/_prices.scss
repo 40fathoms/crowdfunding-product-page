@@ -1,0 +1,109 @@
+.prices{
+
+    background-color: $white;
+    
+    border-radius: 0.5rem;
+    border: 0.1px solid lighten($darkGrey, 40%);
+    width: 86.67vw;
+    padding: 1rem 1.3125rem 2.18rem 1.3125rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+    text-align: center;
+
+    @include breakpoint-up(large){
+        width: 50.694vw;
+        padding: 2.68rem 2.5625rem 2.68rem 2.5625rem;
+    }
+
+    &_data{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+
+        @include breakpoint-up(large){
+            width: 100%;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+    }
+
+    &_item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: nowrap;
+        
+        @include breakpoint-down(medium){ 
+            height: 5.3375rem;        
+            width: 5rem;
+            position: relative;
+            
+            &:not(:last-child){
+                border-bottom: 1px solid lighten($darkGrey, 40%);
+            }
+        }
+     
+        @include breakpoint-up(large){
+            height: 3.75rem;
+            width: 14vw;
+            
+            &:not(:last-child){
+                border-right: 1px solid lighten($darkGrey, 40%);
+            }
+        }
+
+        &_text{
+            
+            @include breakpoint-down(medium){
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+
+            @include breakpoint-up(large){
+                text-align: start;
+            }
+
+            @include breakpoint-up(xlarge){
+                text-align: start;
+            }
+
+            h2{
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
+            p{
+                font-size: 0.8rem;
+                font-weight: 400;
+                line-height: 1.7;
+                color: $darkGrey;
+
+                margin: 0;
+                @include breakpoint-up(xlarge){
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    &_progressBar{
+        background-color: lighten($darkGrey, 49%);
+        width: 100%;
+        height: 0.68rem;
+        border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
+    }
+
+    &_progress{
+        background-color: $moderateCyan;
+        max-width: 100%;
+        height: 0.68rem;
+        border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
+    }
+}

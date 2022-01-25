@@ -1,0 +1,164 @@
+.intro{
+
+    background-color: $white;
+    
+    border-radius: 0.5rem;
+    border: 0.1px solid lighten($darkGrey, 40%);
+    width: 86.67vw;
+    padding: 0 1.3125rem 2.18rem 1.3125rem;
+
+    position: relative;
+    margin-top: 15.1875rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+    text-align: center;
+
+    @include breakpoint-up(large){
+        width: 50.694vw;
+        padding: 0 2.5625rem 2.68rem 2.5625rem;
+    }
+
+    &_logo{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -1.5rem);
+    }
+
+    &_text{
+
+        h2{
+            font-size: 1.1rem;
+            width: 80%;
+            margin: 3.5rem auto auto auto;
+
+            @include breakpoint-up(medium){
+                font-size: 1.3rem;
+                width: 100%;
+                margin-top: 3.875rem;
+            }
+        }
+
+        p{
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: $darkGrey;
+
+            @include breakpoint-up(medium){
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &_buttons{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        @include breakpoint-up(small){
+            justify-content: space-between;
+        }
+
+        button{
+            padding: 1rem 1rem;
+            border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
+            border: none;
+        }   
+    }
+
+    &_support{
+        max-width: 13.3125rem;
+        width: 36.800vw;
+
+        background-color: $moderateCyan;
+        color: $white;
+        font-weight: 700;
+        font-size: 0.9rem;
+
+        @include breakpoint-up(small){
+            width: 56.800vw;
+            height: 3.46rem;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: $darkCyan;
+        }
+    }
+
+    &_bookmark{
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+        &.bookmark_desktop{
+
+            height:3.43rem;
+            width: 10.93rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+
+            background: 
+            url(../images/icon-bookmark.svg);
+            background-size: 3.43rem 3.43rem;
+            background-repeat: no-repeat;
+
+            padding-left: 4rem;
+            background-color: lighten($darkGrey, 49%);
+            color: $darkGrey;
+
+            @include breakpoint-down(small){
+                display: none;
+            }
+
+            &:hover{
+                background: 
+                url(../images/icon-bookmark-hover.svg);
+                background-size: 3.43rem 3.43rem;
+                background-repeat: no-repeat;
+                background-color: lighten($darkGrey, 49%);
+            }
+        }
+
+        &.bookmark_mobile{
+            padding: 0;
+            height: 3.43rem;
+            width: 3.43rem;
+
+            background: 
+            url(../images/icon-bookmark.svg);
+            background-size: 3.43rem 3.43rem;
+            background-repeat: no-repeat;
+        
+            @include breakpoint-up(medium){
+                display: none;
+            }
+        }
+
+        &.bookmarked{
+            background: 
+                url(../images/icon-bookmarked.svg);
+                background-size: 3.43rem 3.43rem;
+                background-repeat: no-repeat;
+                
+                background-color: lighten($moderateCyan, 49%);
+                color: $darkCyan;
+            
+            &:hover{
+                background: 
+                url(../images/icon-bookmarked-hover.svg);
+                background-size: 3.43rem 3.43rem;
+                background-repeat: no-repeat;
+
+                background-color: lighten($moderateCyan, 49%);
+            }
+        }
+    }
+}
