@@ -24,5 +24,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [João Paulo Martins](https://40fathoms.github.io/personal-portfolio/)
+- Website - [João Paulo Martins](https://portfolio-40fathoms.vercel.app/)
 - Frontend Mentor - [@40fathoms](https://www.frontendmentor.io/profile/40fathoms)
